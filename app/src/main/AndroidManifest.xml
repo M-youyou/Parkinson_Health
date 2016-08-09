@@ -26,18 +26,21 @@
             android:screenOrientation="landscape" />
         <activity android:name=".HistoryActivity" />
         <activity android:name=".DetailActivity" />
-        <activity android:name=".GyroActivity"></activity>
+        <activity android:name=".GyroActivity" />
         <activity
             android:name=".WelcomeActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+
+        </activity>
+        <activity android:name=".InfoActivity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".ItemActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".InfoActivity" />
-        <activity android:name=".SettingActivity" />
     </application>
 
 </manifest>
