@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_draw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D6D5D6"
+    android:orientation="vertical"
+    android:padding="3dp"
+    tools:context="cn.ac.ict.yxd.itug.DrawActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:layout_margin="3dp"
+        >
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/rg_draw_trail"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            >
+        </RadioGroup>
+        <TextView
+            android:id="@+id/tv_draw_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:text="111" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_draw_acc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Acc" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart_acc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/tv_draw_gyro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Gyro" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chart_gyro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp" />
+    </LinearLayout>
+
+</LinearLayout>

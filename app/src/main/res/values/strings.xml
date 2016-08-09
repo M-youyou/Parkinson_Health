@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Health</string>
+    <string name="title">Health Clinic</string>
+    <string name="Patient">Patient</string>
+    <string name="DeviceLocation">Device Location</string>
+    <string name="trials">Trails</string>
+    <string name="distance">Distance</string>
+    <string name="btn_begin">Begin</string>
+    <string-array name="locations">
+        <item>Right foot</item>
+        <item>Left foot</item>
+        <item>Right thigh</item>
+        <item>Left thigh</item>
+        <item>Right hip</item>
+        <item>Left hip</item>
+        <item>Right arm</item>
+        <item>Left arm</item>
+        <item>Back</item>
+        <item>Sternum</item>
+        <item>Other</item>
+    </string-array>
+    <string name="go">Go</string>
+    <string name="startAgain">Start Again</string>
+    <string name="Gyro">Gyro</string>
+    <string name="Acc">Accelerometer</string>
+    <string name="stop">Stop</string>
+    <string name="dialogTitle">iTug Stopped</string>
+    <string name="dialogContent">Please accept or reject this try</string>
+    <string name="accept">Accept</string>
+    <string name="discard">Discard</string>
+    <string name="patientnotnull">Patient must be inputted.</string>
+    <string name="parparing">Please be prepared!</string>
+    <string name="countdown">Counting Down...</string>
+    <string name="testing">The Test is on going...</string>
+    <string name="detailPatient">Patient:</string>
+    <string name="detailDate">Date:</string>
+    <string name="detailComments">Comments:</string>
+    <string name="detailTime">Time per Trail:</string>
+    <string name="detailNumTr">Number of Trails:</string>
+    <string name="detailDis">Distance:</string>
+    <string name="language">Language:</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+</resources>

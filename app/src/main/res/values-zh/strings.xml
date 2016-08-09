@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Health</string>
+    <string name="title">Health Clinic</string>
+    <string name="Patient">患者</string>
+    <string name="DeviceLocation">位置</string>
+    <string name="trials">来回数</string>
+    <string name="distance">距离(米)</string>
+    <string name="btn_begin">开始</string>
+    <string-array name="locations">
+        <item>右脚</item>
+        <item>左脚</item>
+        <item>右腿</item>
+        <item>左腿</item>
+        <item>右臀</item>
+        <item>左臀</item>
+        <item>右臂</item>
+        <item>左臂</item>
+        <item>背部</item>
+        <item>胸部</item>
+        <item>其他</item>
+    </string-array>
+    <string name="go">检测</string>
+    <string name="startAgain">重新开始</string>
+    <string name="Gyro">陀螺仪</string>
+    <string name="Acc">加速度计</string>
+    <string name="stop">结束</string>
+    <string name="dialogTitle">检测结束</string>
+    <string name="dialogContent">是否接受本次检测?</string>
+    <string name="accept">接受</string>
+    <string name="discard">拒绝</string>
+    <string name="patientnotnull">必须输入患者信息</string>
+    <string name="parparing">请做好准备</string>
+    <string name="countdown">正在倒计时……</string>
+    <string name="testing">正在检测……</string>
+    <string name="detailPatient">患者:</string>
+    <string name="detailDate">时间:</string>
+    <string name="detailComments">评论:</string>
+    <string name = "detailTime">每来回平均时间:</string>
+    <string name="detailNumTr">来回数:</string>
+    <string name="detailDis">距离(米):</string>
+    <string name="language">语言:</string>
+
+</resources>
