@@ -1,4 +1,4 @@
-package cn.ac.ict.yxd.itug;
+package cn.ac.ict.yxd.itug.stride;
 
 import android.content.Context;
 import android.os.Environment;

@@ -7,7 +7,7 @@
     android:background="#D6D5D6"
     android:orientation="vertical"
     android:padding="3dp"
-    tools:context="cn.ac.ict.yxd.itug.DrawActivity">
+    tools:context="cn.ac.ict.yxd.itug.stride.DrawActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

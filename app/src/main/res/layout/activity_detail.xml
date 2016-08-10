@@ -5,7 +5,7 @@
     android:id="@+id/activity_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.ac.ict.yxd.itug.DetailActivity"
+    tools:context="cn.ac.ict.yxd.itug.stride.DetailActivity"
     android:padding="20dp">
 <RelativeLayout
     android:layout_width="wrap_content"

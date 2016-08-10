@@ -1,4 +1,4 @@
-package cn.ac.ict.yxd.itug;
+package cn.ac.ict.yxd.itug.stride;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -21,6 +21,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import cn.ac.ict.yxd.itug.R;
 
 import static cn.ac.ict.yxd.itug.R.id.tv_go;
 

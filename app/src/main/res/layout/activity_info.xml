@@ -5,7 +5,7 @@
     android:id="@+id/activity_info"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.ac.ict.yxd.itug.InfoActivity"
+    tools:context="cn.ac.ict.yxd.itug.stride.InfoActivity"
     android:background="#ffffff">
     <ImageView
         android:layout_width="wrap_content"

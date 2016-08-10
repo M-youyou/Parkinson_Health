@@ -16,24 +16,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name=".stride.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".GoActivity"
+            android:name=".stride.GoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DrawActivity"
+            android:name=".stride.DrawActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".HistoryActivity" />
-        <activity android:name=".DetailActivity" />
-        <activity android:name=".GyroActivity" />
+        <activity android:name=".stride.HistoryActivity" />
+        <activity android:name=".stride.DetailActivity" />
+        <activity android:name=".stride.GyroActivity" />
         <activity
             android:name=".WelcomeActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
         </activity>
-        <activity android:name=".InfoActivity" />
-        <activity android:name=".SettingActivity" />
+        <activity android:name=".stride.InfoActivity" />
+        <activity android:name=".stride.SettingActivity" />
         <activity android:name=".ItemActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

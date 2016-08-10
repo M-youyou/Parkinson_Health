@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import cn.ac.ict.yxd.itug.stride.MainActivity;
+
 public class ItemActivity extends Activity {
     TextView stride, sound, face, cognition, finger;
     @Override

@@ -1,4 +1,4 @@
-package cn.ac.ict.yxd.itug;
+package cn.ac.ict.yxd.itug.stride;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.widget.TextView;
+
+import cn.ac.ict.yxd.itug.R;
 
 public class GyroActivity extends Activity {
     TextView yaw, pitch, roll,

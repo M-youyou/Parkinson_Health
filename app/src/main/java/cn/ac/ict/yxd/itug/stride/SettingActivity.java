@@ -1,13 +1,15 @@
-package cn.ac.ict.yxd.itug;
+package cn.ac.ict.yxd.itug.stride;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-public class InfoActivity extends Activity {
+import cn.ac.ict.yxd.itug.R;
+
+public class SettingActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_info);
+        setContentView(R.layout.activity_setting);
     }
 }

@@ -4,7 +4,7 @@
     android:id="@+id/activity_go"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.ac.ict.yxd.itug.GoActivity"
+    tools:context="cn.ac.ict.yxd.itug.stride.GoActivity"
     android:layout_margin="20dp">
     <TextView
         android:layout_width="match_parent"

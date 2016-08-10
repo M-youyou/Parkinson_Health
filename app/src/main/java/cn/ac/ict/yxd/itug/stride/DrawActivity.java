@@ -1,4 +1,4 @@
-package cn.ac.ict.yxd.itug;
+package cn.ac.ict.yxd.itug.stride;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -18,6 +18,8 @@ import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import cn.ac.ict.yxd.itug.R;
 
 public class DrawActivity extends Activity {
     Record record;

@@ -4,7 +4,7 @@
     android:id="@+id/activity_gyro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.ac.ict.yxd.itug.GyroActivity"
+    tools:context="cn.ac.ict.yxd.itug.stride.GyroActivity"
     android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
