@@ -34,4 +34,6 @@ dependencies {
     compile 'com.yalantis:sidemenu:1.0'
     compile 'com.github.ozodrukh:CircularReveal:2.0.1@aar'
     testCompile 'junit:junit:4.12'
+    compile files('libs/javacpp.jar')
+    compile files('libs/javacv.jar')
 }
