@@ -48,7 +48,6 @@ import android.widget.TextView;
 
 import com.googlecode.javacv.FrameRecorder;
 import com.googlecode.javacv.cpp.opencv_core.IplImage;
-import cn.ac.ict.yxd.itug.face.ProgressView.State;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -61,6 +60,7 @@ import java.util.Collections;
 import java.util.List;
 
 import cn.ac.ict.yxd.itug.R;
+import cn.ac.ict.yxd.itug.face.ProgressView.State;
 
 import static com.googlecode.javacv.cpp.opencv_core.IPL_DEPTH_8U;
 
@@ -71,16 +71,12 @@ import static com.googlecode.javacv.cpp.opencv_core.IPL_DEPTH_8U;
 public class FFmpegRecorderActivity extends Activity implements OnClickListener, OnTouchListener {
 
 	private static final String CLASS_LABEL = "RecordActivity";
-	private static final String LOG_TAG = CLASS_LABEL;
 	//当前录制的质量，会影响视频清晰度和文件大小
 	private static final int CURRENT_RESOLUTION = CONSTANTS.RESOLUTION_MEDIUM_VALUE;
 	//录制的最长时间
 	private static final int RECORDING_TIME = 6000;
 	//录制的最短时间
 	private static final int RECORDING_MINIMUM_TIME = 3000;
-	//提示换个场景
-	private static final int RECORDING_CHANGE_TIME = 3000;
-
 	private PowerManager.WakeLock mWakeLock;
 	//视频文件的存放地址
 	private String strVideoPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "rec_video.mp4";
@@ -96,8 +92,6 @@ public class FFmpegRecorderActivity extends Activity implements OnClickListener,
 	private boolean	isRecordingStarted;
 	//是否开启闪光灯
 	private boolean isFlashOn;
-	private TextView txtTimer;
-	private TextView txtRecordingSize;
 	//分别为闪光灯按钮、取消按钮、下一步按钮、转置摄像头按钮
 	private Button flashIcon;
 	private Button cancelBtn;
@@ -105,7 +99,7 @@ public class FFmpegRecorderActivity extends Activity implements OnClickListener,
 	private Button switchCameraIcon;
 	private boolean nextEnabled;
 	
-	//录制视频和保存音频的类
+	//录制视频和保存音频的类,volatile 多线程操作
 	private volatile NewFFmpegFrameRecorder videoRecorder;
 	
 	//判断是否是前置摄像头
@@ -255,12 +249,9 @@ public class FFmpegRecorderActivity extends Activity implements OnClickListener,
 		System.loadLibrary("checkneon");
 	}
 
-	public native static int  checkNeonFromJNI();
-
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		setContentView(R.layout.activity_recorder);
 
 		PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
@@ -441,9 +432,10 @@ public class FFmpegRecorderActivity extends Activity implements OnClickListener,
 				}
 			}
 			stopPreview();
-			if(mCamera != null)
+			if(mCamera != null) {
 				mCamera.release();
-			
+				mCamera = null;
+			}
 			if(defaultCameraId >= 0)
 				cameraDevice = Camera.open(defaultCameraId);
 			else
@@ -620,6 +612,7 @@ public class FFmpegRecorderActivity extends Activity implements OnClickListener,
 			registerVideo();
 			returnToCaller(true);
 			videoRecorder = null;
+
 		}
 		
 	}
@@ -749,7 +742,7 @@ public class FFmpegRecorderActivity extends Activity implements OnClickListener,
 			cameraParameters = mCamera.getParameters();
 			mHolder = getHolder();
 			mHolder.addCallback(CameraView.this);
-			mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+			//mHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
 			mCamera.setPreviewCallbackWithBuffer(CameraView.this)    ;
 		}
 
@@ -960,7 +953,7 @@ public class FFmpegRecorderActivity extends Activity implements OnClickListener,
 					}
 					//超过最低时间时，下一步按钮可点击
 					totalTime = System.currentTimeMillis() - firstTime - pausedTime - ((long) (1.0 / (double) frameRate) * 1000);
-					if (!nextEnabled && totalTime >= RECORDING_CHANGE_TIME) {
+					if (!nextEnabled && totalTime >= RECORDING_MINIMUM_TIME) {
 						nextEnabled = true;
 						nextBtn.setEnabled(true);
 					}
@@ -969,10 +962,6 @@ public class FFmpegRecorderActivity extends Activity implements OnClickListener,
 						mHandler.sendEmptyMessage(5);
 					}
 
-					if (currentRecorderState == RecorderState.PRESS && totalTime >= RECORDING_CHANGE_TIME) {
-						currentRecorderState = RecorderState.LOOSEN;
-						mHandler.sendEmptyMessage(2);
-					}
 
 					mVideoTimestamp += frameTime;
 					if (lastSavedframe.getTimeStamp() > mVideoTimestamp) {
@@ -1251,12 +1240,12 @@ public class FFmpegRecorderActivity extends Activity implements OnClickListener,
 
 	/**
 	 * 求出录制的总时间
-	
-	private synchronized void setTotalVideoTime(){
-		if(totalTime > 0)
-			txtTimer.setText(Util.getRecordingTimeFromMillis(totalTime));
-		
-	} */
+
+	 private synchronized void setTotalVideoTime(){
+	 if(totalTime > 0)
+	 txtTimer.setText(Util.getRecordingTimeFromMillis(totalTime));
+
+	 } */
 	
 	/**
 	 * 释放资源，停止录制视频和音频

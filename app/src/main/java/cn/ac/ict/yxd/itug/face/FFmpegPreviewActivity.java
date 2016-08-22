@@ -17,6 +17,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 
+import java.io.File;
+
+import cn.ac.ict.yxd.itug.ItemActivity;
 import cn.ac.ict.yxd.itug.R;
 
 public class FFmpegPreviewActivity extends Activity implements TextureView.SurfaceTextureListener
@@ -76,10 +79,11 @@ public class FFmpegPreviewActivity extends Activity implements TextureView.Surfa
 			mediaPlayer.setDataSource(path);
 			// 把视频画面输出到Surface
 			mediaPlayer.setSurface(surface);
-			mediaPlayer.setLooping(true);
+			mediaPlayer.setLooping(false);
 			mediaPlayer.prepare();
 			mediaPlayer.seekTo(0);
 		} catch (Exception e) {
+
 		}
 	}
 
@@ -118,11 +122,14 @@ public class FFmpegPreviewActivity extends Activity implements TextureView.Surfa
 			imagePlay.setVisibility(View.GONE);
 			break;
 		case R.id.preview_video:
-			if(mediaPlayer.isPlaying()){
+			if(mediaPlayer.isPlaying()) {
 				mediaPlayer.pause();
 				imagePlay.setVisibility(View.VISIBLE);
 			}
 			break;
+			case R.id.play_next:
+
+				break;
 		default:
 			break;
 		}
@@ -130,10 +137,10 @@ public class FFmpegPreviewActivity extends Activity implements TextureView.Surfa
 	
 	private void stop(){
 		mediaPlayer.stop();
-		mediaPlayer.release();
-		mediaPlayer = null;
-		Intent intent = new Intent(this,FFmpegRecorderActivity.class);
+		Intent intent = new Intent(this,ItemActivity.class);
 		startActivity(intent);
+		File file = new File(path);
+		file.delete();
 		finish();
 	}
 	
