@@ -32,8 +32,6 @@ public class RecordDB {
             oos = new ObjectOutputStream(stream);
             oos.writeObject(record);
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

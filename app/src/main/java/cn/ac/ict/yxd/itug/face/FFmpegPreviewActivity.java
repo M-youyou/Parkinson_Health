@@ -19,7 +19,7 @@ import android.widget.RelativeLayout.LayoutParams;
 
 import java.io.File;
 
-import cn.ac.ict.yxd.itug.ItemActivity;
+import cn.ac.ict.yxd.itug.MenuActivity;
 import cn.ac.ict.yxd.itug.R;
 
 public class FFmpegPreviewActivity extends Activity implements TextureView.SurfaceTextureListener
@@ -137,7 +137,7 @@ public class FFmpegPreviewActivity extends Activity implements TextureView.Surfa
 	
 	private void stop(){
 		mediaPlayer.stop();
-		Intent intent = new Intent(this,ItemActivity.class);
+		Intent intent = new Intent(this,MenuActivity.class);
 		startActivity(intent);
 		File file = new File(path);
 		file.delete();

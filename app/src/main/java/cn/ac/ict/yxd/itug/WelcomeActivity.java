@@ -17,7 +17,7 @@ public class WelcomeActivity extends Activity {
 
             @Override
             public void run() {
-                Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+                Intent intent = new Intent(WelcomeActivity.this, MenuActivity.class);
                 startActivity(intent);
                 WelcomeActivity.this.finish();
             }

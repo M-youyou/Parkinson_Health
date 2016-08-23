@@ -33,6 +33,7 @@
         <activity
             android:name=".stride.MainActivity"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".stride.GoActivity"
             android:screenOrientation="portrait" />
@@ -49,12 +50,11 @@
         </activity>
         <activity android:name=".stride.InfoActivity" />
         <activity android:name=".stride.SettingActivity" />
-        <activity android:name=".ItemActivity"
+        <activity android:name=".MenuActivity"
             android:launchMode="singleInstance">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -9,7 +9,7 @@ import android.widget.TextView;
 import cn.ac.ict.yxd.itug.face.FFmpegRecorderActivity;
 import cn.ac.ict.yxd.itug.stride.MainActivity;
 
-public class ItemActivity extends Activity {
+public class MenuActivity extends Activity {
     TextView stride, sound, face, cognition, finger;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,13 +27,13 @@ public class ItemActivity extends Activity {
         stride.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ItemActivity.this,MainActivity.class));
+                startActivity(new Intent(MenuActivity.this,MainActivity.class));
             }
         });
         face.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ItemActivity.this, FFmpegRecorderActivity.class);
+                Intent intent = new Intent(MenuActivity.this, FFmpegRecorderActivity.class);
                 startActivity(intent);
             }
         });
