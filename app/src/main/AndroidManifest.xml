@@ -53,10 +53,7 @@
         <activity android:name=".MenuActivity"
             android:launchMode="singleInstance">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
         <activity
@@ -70,7 +67,17 @@
             android:screenOrientation="portrait"
             android:name="cn.ac.ict.yxd.itug.face.FFmpegPreviewActivity">
         </activity>
+        <activity
+            android:name="cn.ac.ict.yxd.itug.detection.SensorDetectorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:launchMode="singleInstance">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
 

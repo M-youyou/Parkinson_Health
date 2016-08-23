@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:typeface="sans"
+        android:id="@+id/tv_isOK" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tv_isOK"
+        android:textStyle="bold"
+        android:typeface="sans"
+        android:textSize="15sp"
+        android:id="@+id/tv_sensorLabel" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_sensorName"
+        android:layout_alignParentEnd="true"
+        android:textColor="#343434"
+        android:textSize="12sp"
+        tools:ignore="RelativeOverlap" />
+</RelativeLayout>
