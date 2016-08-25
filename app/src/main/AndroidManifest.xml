@@ -46,7 +46,10 @@
         <activity
             android:name=".WelcomeActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".stride.InfoActivity" />
         <activity android:name=".stride.SettingActivity" />
@@ -68,17 +71,13 @@
             android:name="cn.ac.ict.yxd.itug.face.FFmpegPreviewActivity">
         </activity>
         <activity
-            android:name="cn.ac.ict.yxd.itug.detection.SensorDetectorActivity"
+            android:name=".detection.MainDetectorActivity"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:launchMode="singleInstance">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
+        </activity>
     </application>
 
 

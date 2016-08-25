@@ -22,11 +22,9 @@ public class SensorAdapter extends RecyclerView.Adapter<SensorAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public ViewHolder(View v) {
             super(v);
-            isOKView = (TextView) v.findViewById(R.id.tv_isOK);
             sensorLabelView = (TextView) v.findViewById(R.id.tv_sensorLabel);
             sensorNameView = (TextView) v.findViewById(R.id.tv_sensorName);
         }
-        TextView isOKView;
         TextView sensorLabelView;
         TextView sensorNameView;
     }
@@ -50,11 +48,11 @@ public class SensorAdapter extends RecyclerView.Adapter<SensorAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position){
-        if (listData.get(position).getSensorState()) {
-            holder.isOKView.setText("\u2705");
-        } else {
-            holder.isOKView.setText("\u274C");
-        }
+//        if (listData.get(position).getSensorState()) {
+//            holder.isOKView.setText("\u2705");
+//        } else {
+//            holder.isOKView.setText("\u274C");
+//        }
 
         holder.sensorNameView.setText(listData.get(position).getSensorName());
         holder.sensorLabelView.setText(listData.get(position).getSensorLabel());

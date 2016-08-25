@@ -73,8 +73,9 @@
             android:layout_weight="1"
             android:background="@drawable/border"
 
-            android:text=""
+            android:text="设备检测"
             android:gravity="center"
+            android:id="@+id/detection"
             />
     </LinearLayout>
 

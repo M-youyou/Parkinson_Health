@@ -8,8 +8,6 @@
     android:paddingBottom="20dp"
     >
 
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,12 +15,12 @@
         android:typeface="sans"
         android:textSize="13sp"
         android:textColor="#787878"
-        android:id="@+id/tv_sensorLabel" />
+        android:id="@+id/tv_cameraLabel" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_sensorName"
+        android:id="@+id/tv_cameraResolution"
         android:layout_alignParentEnd="true"
         android:textSize="13sp"
         tools:ignore="RelativeOverlap" />
