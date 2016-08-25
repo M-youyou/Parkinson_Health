@@ -48,12 +48,6 @@ public class SensorAdapter extends RecyclerView.Adapter<SensorAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position){
-//        if (listData.get(position).getSensorState()) {
-//            holder.isOKView.setText("\u2705");
-//        } else {
-//            holder.isOKView.setText("\u274C");
-//        }
-
         holder.sensorNameView.setText(listData.get(position).getSensorName());
         holder.sensorLabelView.setText(listData.get(position).getSensorLabel());
     }

@@ -1,82 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_item"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuActivity"
-    android:orientation="vertical">
-    <LinearLayout
+    android:padding="10dp"
+    android:background="#212121">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_menu"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="步态"
-            android:background="@drawable/border"
-            android:gravity="center"
-            android:id="@+id/stride"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="言语"
-            android:background="@drawable/border"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical" />
 
-            android:gravity="center"
-            android:id="@+id/sound"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/border"
-
-            android:text="面具脸"
-            android:gravity="center"
-            android:id="@+id/face"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:background="@drawable/border"
-
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="手指"
-            android:gravity="center"
-            android:id="@+id/finger"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="1">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/border"
-
-            android:text="认知能力"
-            android:gravity="center"
-            android:id="@+id/cognition"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/border"
-
-            android:text="设备检测"
-            android:gravity="center"
-            android:id="@+id/detection"
-            />
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>
