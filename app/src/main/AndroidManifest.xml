@@ -54,7 +54,10 @@
         <activity android:name=".stride.InfoActivity" />
         <activity android:name=".stride.SettingActivity" />
         <activity android:name=".MenuActivity"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            >
 
 
         </activity>
