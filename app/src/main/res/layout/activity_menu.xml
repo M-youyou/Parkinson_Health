@@ -4,7 +4,7 @@
     android:id="@+id/activity_item"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="cn.ac.ict.yxd.itug.ItemActivity"
+    tools:context=".MenuActivity"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
@@ -73,8 +73,9 @@
             android:layout_weight="1"
             android:background="@drawable/border"
 
-            android:text=""
+            android:text="设备检测"
             android:gravity="center"
+            android:id="@+id/detection"
             />
     </LinearLayout>
 

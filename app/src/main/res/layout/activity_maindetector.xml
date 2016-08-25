@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#444444"
+    android:padding="8dp"
+
+    >
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_view_media"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#222222">
+
+                <fragment android:name="cn.ac.ict.yxd.itug.detection.MediaDetectorFragment"
+                    android:id="@+id/camera_fragment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/card_view_sensor"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="#222222">
+
+                <fragment android:name="cn.ac.ict.yxd.itug.detection.SensorDetectorFragment"
+                    android:id="@+id/sensor_fragment"
+                    android:layout_below="@+id/camera_fragment"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+
+</LinearLayout>
