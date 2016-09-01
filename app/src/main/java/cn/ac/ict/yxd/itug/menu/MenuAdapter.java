@@ -33,7 +33,6 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
             menuDescriptionView = (TextView) v.findViewById(R.id.tv_menuDescription);
             menuExecutionView = (TextView) v.findViewById(R.id.tv_menuExecution);
         };
-
         ImageView menuIconView;
         TextView menuHeaderView;
         TextView menuDescriptionView;
@@ -50,6 +49,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
                                                        int viewType) {
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_menu, parent, false);
+
         return new ViewHolder(v);
     }
 
@@ -69,12 +69,19 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ViewHolder> {
         final Intent intent = listData.get(position).menuIntent;
 
         if (intent != null) {
-            holder.menuExecutionView.setOnClickListener(new View.OnClickListener() {
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
-                    v.getContext().startActivity(intent);
+                public void onClick(View view) {
+                    view.getContext().startActivity(intent);
                 }
             });
+//            holder.menuExecutionView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    v.getContext().startActivity(intent);
+//                }
+//            });
         } else {
             holder.menuExecutionView.setText("未完成");
             holder.menuExecutionView.setTextColor(Color.parseColor("#f44336"));

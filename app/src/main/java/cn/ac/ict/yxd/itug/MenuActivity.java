@@ -15,6 +15,7 @@ import cn.ac.ict.yxd.itug.detection.MainDetectorActivity;
 import cn.ac.ict.yxd.itug.face.FFmpegRecorderActivity;
 import cn.ac.ict.yxd.itug.menu.MenuAdapter;
 import cn.ac.ict.yxd.itug.menu.MenuItem;
+import cn.ac.ict.yxd.itug.sound.SoundMainActivity;
 import cn.ac.ict.yxd.itug.stride.MainActivity;
 import cn.ac.ict.yxd.itug.tapping.TappingMainActivity;
 
@@ -56,7 +57,7 @@ public class MenuActivity extends Activity {
         menuArray.add(cognition);
 
         MenuItem sound = new MenuItem(R.drawable.ic_sound_50dp, "语言能力检测", "..", "开始检测");
-        // TODO: bind sound activity.
+        sound.addMenuIntent(new Intent(MenuActivity.this, SoundMainActivity.class));
         menuArray.add(sound);
 
         MenuItem tapping = new MenuItem(R.drawable.ic_finger_50dp, "手指灵敏度检测", "..", "开始检测");

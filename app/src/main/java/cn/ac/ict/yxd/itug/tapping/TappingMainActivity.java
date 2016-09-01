@@ -1,17 +1,9 @@
 package cn.ac.ict.yxd.itug.tapping;
 
-import android.Manifest;
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Environment;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -29,7 +21,6 @@ import cn.ac.ict.yxd.itug.R;
 
 public class TappingMainActivity extends Activity implements View.OnClickListener {
 
-    private static final int MY_PERMISSIONS_REQUEST_READ_CONTACTS = 1;
     private TextView tvLeft, tvRight;
     private EditText etUsername, etAge;
     private Button btnStart, btnLeft, btnRight;

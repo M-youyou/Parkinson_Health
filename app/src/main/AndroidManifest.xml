@@ -109,6 +109,13 @@
             android:launchMode="singleInstance">
 
         </activity>
+        <activity
+            android:name="cn.ac.ict.yxd.itug.sound.SoundMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:launchMode="singleInstance">
+
+        </activity>
     </application>
 
 
