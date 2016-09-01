@@ -81,6 +81,34 @@
 
 
         </activity>
+        <activity
+            android:name=".count.CountMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:launchMode="singleInstance">
+
+        </activity>
+        <activity
+            android:name="cn.ac.ict.yxd.itug.count.NextActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:launchMode="singleInstance">
+
+        </activity>
+        <activity
+            android:name="cn.ac.ict.yxd.itug.count.StartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:launchMode="singleInstance">
+
+        </activity>
+        <activity
+            android:name="cn.ac.ict.yxd.itug.tapping.TappingMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:launchMode="singleInstance">
+
+        </activity>
     </application>
 
 

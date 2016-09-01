@@ -41,4 +41,5 @@
     <string name="language">Language:</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">Close</string>
+    <string name="notice">点击"开始"按钮开始认知能力测试，\n请您记住接下来出现的数字！</string>
 </resources>
